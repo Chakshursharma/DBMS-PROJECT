@@ -1,0 +1,35 @@
+
+body {
+    /* display: flex; */
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+.login-box{
+    text-align: center;
+}
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+}
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.gradient{
+    background-image: linear-gradient(180deg, green, green);
+}
+li a:hover{
+    border-radius: 14px;
+    background-color: rgb(125, 231, 125);
+}

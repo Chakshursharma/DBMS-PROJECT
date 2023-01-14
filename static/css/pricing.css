@@ -1,0 +1,40 @@
+
+img{
+    width: 70px;
+}
+.bod{
+    background-color: #212121;
+    color: white;
+}
+.nav-link{
+    color:white;
+}
+
+.row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+li a:hover{
+    border-radius: 14px;
+    background-color: rgb(125, 231, 125);
+}
+.pad{
+    padding: 0px 10px;
+}
+li a:hover{
+    border-radius: 14px;
+    background-color: rgb(125, 231, 125);
+}
+.lines {
+    margin: auto;
+    width: 110px;
+    position: relative;
+    border-top: 2px solid #d92253;
+    border-bottom: 2px solid #d92253;
+    margin-top: 5px;
+}
+.section-subtitle {
+    padding-top: 30px;
+    font-size: 20px;
+}

@@ -1,0 +1,26 @@
+.myImg{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+img{
+    width: 70px;
+}
+.bod{
+    background-color: #212121;
+    color: white;
+}
+.nav-link{
+    color:white;
+}
+
+.row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+li a:hover{
+    border-radius: 14px;
+    background-color: rgb(125, 231, 125);
+}
+
