@@ -16,13 +16,13 @@ body {
 .form-signin .form-floating:focus-within {
     z-index: 2;
 }
-.form-signin input[type="email"] {
+.form-signin input[type="text"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
+.form-signin button[type="submit"] {
+    margin-top: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
@@ -32,7 +32,4 @@ body {
 li a:hover{
     border-radius: 14px;
     background-color: rgb(125, 231, 125);
-}
-.flash{
-    color: red;
 }
