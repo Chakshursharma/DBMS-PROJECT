@@ -41,8 +41,8 @@
                     </li>
                 </ul>
             </div>
-            <a href="/user"><h3><i class="fa-regular fa-user"></i></h3></a>
-            <div style="padding-left: 20px; padding-right: 20px;">user</div>
+            <a href="/user"><i class="fa-regular fa-user"></i></a>
+            <div style="padding-left: 20px; padding-right: 20px;">User</div>
         </div>
     </nav>
     <br>
@@ -78,6 +78,16 @@
                     name="parking_Location">
                 <label for="floatingparking_Location">Parking Location</label>
             </div>
+             <!-- Flash -->
+             <!-- {% with messages = get_flashed_messages() %}
+             {% if messages %}
+             
+                 {% for message in messages %}
+                 <p class="flash">{{ message }}</p>
+                 {% endfor %}
+
+             {% endif %}
+             {% endwith %} -->
             <button class="w-100 btn btn-lg btn-primary gradient" type="submit" href="/user">Submit</button>
             <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p> -->
         </form>

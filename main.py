@@ -96,7 +96,7 @@ def transaction():
         parking_id = request.form.get("parking_id")
         parking_loc = request.form.get("parking_Location")
         cur = mysql.connection.cursor()
-        cur.execute(f"SELECT new_balance from transaction where reg_no = {reg} order by date_added desc limit 1")
+        cur.execute(f"SELECT new_balance from transaction where reg_no = '{reg}' order by date_added desc limit 1")
         bal = cur.fetchone()
         if toll_id=="":
             dec = 50
@@ -107,11 +107,20 @@ def transaction():
         else:
             old_bal = bal["new_balance"]
         new_bal = old_bal -dec
-        cur.execute("INSERT into transaction(reg_no,fastag_id,toll_id,toll_location,parking_id,parking_location,old_balance,new_balance) values (%s,%s,%s,%s,%s,%s,%s,%s)",(reg,fastag,toll_id,toll_loc,parking_id,parking_loc,old_bal,new_bal))
+        if new_bal<50:
+            new_bal=500+old_bal
+        cur.execute(f"INSERT into transaction(reg_no,fastag_id,toll_id,toll_location,parking_id,parking_location,old_balance,new_balance) values ('{reg}','{fastag}','{toll_id}','{toll_loc}','{parking_id}','{parking_loc}',{old_bal},{new_bal})")
         cur.execute("select * from transaction")
         mysql.connection.commit()
         return redirect(url_for("user"))
     return render_template("transaction.html")
+
+@app.route('/delete/<int:user_id>',methods=["GET"])
+def delete(user_id):
+    cur = mysql.connection.cursor()
+    cur.execute(f"DELETE FROM owner where user_id={user_id}")
+    mysql.connection.commit()
+    return redirect("/login")
 
 if __name__== "__main__":
     app.run(debug=True) 

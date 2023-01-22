@@ -30,3 +30,18 @@ li a:hover{
     border-radius: 14px;
     background-color: rgb(125, 231, 125);
 }
+.box {
+    background-color: white;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    font-size: 20px;
+    height: auto;
+    width: auto;
+    text-align: justify;
+}
+.det {
+    text-align: center;
+    font-size: 30px;
+}
